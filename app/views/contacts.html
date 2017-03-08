@@ -1,0 +1,29 @@
+<div class="ui secondary inverted blue menu">
+  <div class="ui container">
+  <a class="item">
+    Add contact
+  </a>
+
+    <div class="item">
+      <div ng-show="searchEnabled" class="ui big transparent inverted icon input">
+        <input ng-model="searchFilter" type="text" placeholder="Search...">
+      </div>
+    </div>
+  <div class="right menu">
+    <a class="item" ng-click="searchEnabled=true">
+        <i class="big search icon"></i>
+      </a>
+  </div>
+</div>
+</div>
+<div class="ui container">
+<div class="ui huge relaxed divided list">
+  <div class="item" ng-repeat="contact in contacts | filter: searchFilter">
+    <img class="ui avatar image" ng-src="{{contact.avatar}}">
+    <div class="content">
+      <div class="header">{{contact.name}}</div>
+      {{contact.email}}
+    </div>
+  </div>
+</div>
+</div>
