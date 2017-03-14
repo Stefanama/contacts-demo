@@ -1,6 +1,6 @@
 <div class="ui secondary inverted blue menu">
   <div class="ui container">
-  <a class="item">
+  <a class="item" ng-click="openAddContactDialog()">
   <i class="user icon"></i>
 
     Add contact
@@ -42,13 +42,13 @@
               </div>
                 <a class="header">{{selectedContact.name}}</a>
                 <div class="meta">
-                  <span class="date">{{selectedContact.job}} in {{selectedContact.location}}</span>
+                  <span class="date">{{selectedContact.job}} <span ng-if="selectedContact.location">in</span> {{selectedContact.location}}</span>
                 </div>
                 <div class="description">
                     <p><i class="email icon"></i>email: {{selectedContact.email}}</p>
                   </div>
               </div>
-              <div class="extra content">
+              <div class="extra content" ng-if="selectedContact.tags.length>0">
                   <div class="ui blue label" ng-repeat="tag in selectedContact.tags">
                     {{tag}}
                        <i ng-click="removeTag(tag)" class="delete icon"></i>

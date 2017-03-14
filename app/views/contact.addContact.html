@@ -1,0 +1,20 @@
+<form class="ui form" name="addContactForm" novalidate ng-submit="addContact(tempContact, addContactForm)">
+  <div class="field" ng-class="{'error': addContactForm.name.$invalid && addContactForm.name.$dirty || formNotValid}">
+    <label>Full Name</label>
+    <input type="text"  required ng-model="tempContact.name" name="name" placeholder="Full Name...">
+  </div>
+  <div class="field" ng-class="{'error': addContactForm.name.$invalid && addContactForm.name.$dirty || formNotValid}">
+    <label>Email</label>
+    <input type="text" required ng-model="tempContact.email" name="email" placeholder="Email...">
+  </div>
+  <div class="field">
+    <label>Job</label>
+    <input type="text" ng-model="tempContact.job" name="job" placeholder="Job...">
+  </div>
+  <div class="field">
+    <label>Location</label>
+    <input type="text" ng-model="tempContact.location" name="location" placeholder="Location...">
+  </div>
+ 
+  <input type="submit" class="ui button" value="Add">
+</form>

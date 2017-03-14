@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ui.router',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngDialog'
   ])
   .config(function ($stateProvider, $locationProvider, $httpProvider) {
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
