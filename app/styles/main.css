@@ -1,3 +1,28 @@
 .left-aligned{
     padding-left: 0px;
 }
+
+.ui.list > .item{
+    cursor: pointer;
+}
+.ui.list > .item:hover{
+    background: rgba(33, 133, 208, 0.51);
+}
+
+.ui.list > .item.selected{
+    background: rgba(33, 133, 208, 0.31);
+}
+
+.ui.center.aligned.basic.segment{
+    padding: 0;
+}
+
+.ui.center.aligned.basic.segment > .card{
+    border: none;
+    box-shadow: none;
+}
+
+.ui.large.divided.list{
+    max-height: calc(100vh - 68px);
+    overflow-y: auto;
+}

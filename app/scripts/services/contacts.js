@@ -17,7 +17,7 @@ angular.module('contactsApp')
         }, function(err){
             return err.data;
         })
-    } 
+    }
     
     contacts.addContact=function(contact){
         return $http.post('http://www.mocky.io/v2/58088826100000e9232b75b0', contact).then(function(res){

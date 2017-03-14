@@ -26,6 +26,5 @@ angular
         , url: '/'
         , controller: 'ContactsCtrl'
         , templateUrl: 'views/contacts.html'
-    })
-    
+    });
   });
