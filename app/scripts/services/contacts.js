@@ -15,7 +15,7 @@ angular.module('contactsApp')
         return $http.get('http://www.mocky.io/v2/58c0284f0f0000bb035ee3b6').then(function(res){
             return res.data;
         }, function(err){
-            return err.data;
+            return err;
         })
     }
     
@@ -23,7 +23,7 @@ angular.module('contactsApp')
         return $http.post('http://www.mocky.io/v2/58088826100000e9232b75b0', contact).then(function(res){
             return res.data;
         }, function(err){
-            return err.data;
+            return err;
         })
     }
     

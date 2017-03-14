@@ -66,9 +66,14 @@ angular.module('contactsApp')
     
     //push a new contact in the contacts list
     $scope.addContact=function(contact, form){
+        
+        
         if(form.$valid){
+            //should call Contacts.addContact() but the api endpoint is not available
             $scope.contacts.push(contact);
             ngDialog.closeAll();
+            $scope.tempContact={};
+            $scope.formNotValid=false;
         }else{
             $scope.formNotValid=true;
         }
